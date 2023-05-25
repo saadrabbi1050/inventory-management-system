@@ -9,12 +9,12 @@
     <div class="container">
         <div class="card">
             <div class="card-header d-flex">
-              Category Lists
+              Category List
               <a class="btn btn-sm btn-outline-primary ms-4" href="{{ route('category.create')}}" > <i class="bi bi-plus"></i> Add New Catagory</a>
               <div class="ps-5">
-                <a class="btn btn-sm btn-primary" target="_blank"> <i class="bi bi-file-earmark-fill"></i> PDF</a>
-                <a class="btn btn-sm btn-success" > <i class="bi bi-file-earmark-excel"></i> EXCEL</a>
-                <a class="btn btn-sm btn-warning" > <i class="bi bi-trash"></i> BIN</a>
+                <a class="btn btn-sm btn-primary" href="" target="_blank"> <i class="bi bi-file-earmark-fill"></i> PDF</a>
+                <a class="btn btn-sm btn-success" href=""> <i class="bi bi-file-earmark-excel"></i> EXCEL</a>
+                <a class="btn btn-sm btn-warning" href=""> <i class="bi bi-trash"></i> BIN</a>
 
 
               </div>
@@ -40,11 +40,10 @@
                           <tr>
                             <th scope="row"> {{ $sl++ }} </th>
                             <td>{{ $category->name ?? '' }}</td>
-                            <td>{{ $category->description ?? 'No Description Setup' }}</td>
+                            <td>{!!$category->description !!}{{ $category->description ? "": 'No Description Setup' }}</td>
                             <td>
+                              <a class="btn btn-sm btn-primary" href="{{ route('category.show', $category->id)}}"><i class="bi bi-eye"></i></a>
 
-
-                            <a class="btn btn-sm btn-primary" href="{{ route('category.show', $category->id)}}"><i class="bi bi-eye"></i></a>
                                 <a class="btn btn-sm btn-warning" href="{{ route('category.edit', $category->id)}}"><i class="bi bi-pen"></i></a>
                               <form action="{{ route('category.destroy', $category->id)}}" method="POST" style="display: inline">
                                 @method('DELETE')

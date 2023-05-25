@@ -24,7 +24,7 @@
 
                         <div>
                             <label class="form-label">Description</label>
-                            <textarea type="text" name="description"  id="ckeditor" class='form-control'> </textarea>
+                            <textarea type="text" name="description"  id="ckeditor" class='form-control'></textarea>
                             @error('description')
                                 <div class="text-danger mt-3">{{ $message }}</div>
                             @enderror

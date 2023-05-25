@@ -17,9 +17,10 @@
                     <thead>
                       <tr>
                         <th scope="col">Ser No</th>
-                        <th scope="col">Product Name</th>
+                        <th scope="col">name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Qty</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Description</th>
                         <th scope="col">Actions</th>
                       </tr>
@@ -35,10 +36,10 @@
                             <th scope="row"> {{ $sl++ }} </th>
                             <td>{{ $product->name ?? '' }}</td>
                             <td>{{ $product->price ?? 'No Price Setup' }}</td>
-                            
                             <td>{{ $product->qty ?? '' }}</td>
+                            <td>{{ $product->image ?? '' }}</td>
                             <td>{{ $product->description ?? '' }}</td>
-
+                            <td>
                               <a class="btn btn-sm btn-primary" href="{{ route('product.restore', $product->id) }}"> <i class="bi bi-arrow-repeat"></i> Restore</a>
 
                               <form action="{{ route('product.delete', $product->id)}}" method="POST" style="display: inline">

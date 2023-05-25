@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('price');
-            $table->string('qty');
-            $table->string('description')->nullable();
+            $table->string('qty')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

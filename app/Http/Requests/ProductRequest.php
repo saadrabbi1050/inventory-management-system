@@ -20,9 +20,10 @@ class ProductRequest extends FormRequest
 
         return [
 
-            'name'=>'required|max:255',
+            'name' => 'required|unique:products|max:255',
             'price'=>'required',
             'qty '=>'required',
+            'image '=>'required',
             'description '=>'required',
 
             ];

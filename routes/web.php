@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\Product_transjectionController;
+use App\Http\Controllers\ProductOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -173,6 +174,22 @@ Route::prefix('product_transjection')->group(function () {
     Route::delete('/destroy/{id}', [Product_transjectionController::class, 'destroy'])->name('product_transjection.destroy');
     Route::get('/edit/{id}', [Product_transjectionrController::class, 'edit'])->name('product_transjectionr.edit');
     Route::post('/update/{id}',  [Product_transjectionController::class, 'update'])->name('product_transjection.update');
+
+
+});
+
+
+Route::prefix('product_orders')->group(function () {
+
+    Route::get('/', [ProductOrderController::class,  'index'])->name('product_order.index');
+
+    Route::get('/create', [ProductOrderController::class, 'create'])->name('product_order.create');
+    Route::get('/show/{id}', [ProductOrderController::class,  'show'])->name('product_order.show');
+
+    Route::post('/store', [ProductOrderController::class,  'store'])->name('product_order.store');
+    Route::delete('/destroy/{id}', [ProductOrderController::class, 'destroy'])->name('product_order.destroy');
+    Route::get('/edit/{id}', [ProductOrderController::class, 'edit'])->name('product_order.edit');
+    Route::post('/update/{id}',  [ProductOrderController::class, 'update'])->name('product_order.update');
 
 
 });
