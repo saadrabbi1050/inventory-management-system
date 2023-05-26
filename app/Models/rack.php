@@ -12,8 +12,5 @@ class Rack extends Model
 
 
     protected $fillable = ['name','store_id'];
-    public function racks()
-    {
-        return $this->hasMany(Product_transjection::class);
-    }
+    
 }

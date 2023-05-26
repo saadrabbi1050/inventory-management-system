@@ -14,8 +14,5 @@ class Store extends Model
 
 
     protected $fillable = ['name'];
-    public function stors()
-    {
-        return $this->hasMany(Product_transjection::class);
-    }
+    
 }

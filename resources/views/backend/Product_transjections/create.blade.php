@@ -9,50 +9,44 @@
                 <!-- Horizontal Form -->
                 <form action="{{ route('product_transjection.store')}}" method="POST">
                     @csrf
-                    <div class="row mb-3">
-                        <label for="inputTitle1" class="col-sm-2 col-form-label">Store Name</label>
-                        <div class="col-sm-10">
-                            <select name="store_id" class="form-control">
-                                <option value=""> select stores </option>
-                           @foreach($stores as $store)
-                                <option value="{{ $store->id }}">{{ $store->name }}</option>
-                           @endforeach
-                        </select>
-                        </div>
 
                     <div class="row mb-3">
-                        <label for="inputTitle2" class="col-sm-2 col-form-label">Rack Name</label>
+                        <label for="inputTitle1" class="col-sm-2 col-form-label">Store_id</label>
                         <div class="col-sm-10">
-                            <select name="rack_id" class="form-control">
-                                <option value=""> select racks </option>
-                           @foreach($racks as $rack)
-                                <option value="{{ $rack->id }}">{{ $rack->name }}</option>
-                           @endforeach
-                        </select>
+                            <input type="text" name="store_id" class="form-control" id="inputTitle5">
+                            @error('store_id')
+                                <div class="text-danger mt-3">{{$message}} </div>
+                            @enderror
                         </div>
-
-                        <div class="row mb-3">
-                        <label for="inputTitle3" class="col-sm-2 col-form-label">Box Name</label>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputTitle2" class="col-sm-2 col-form-label">Rack_id</label>
                         <div class="col-sm-10">
-                            <select name="box_id" class="form-control">
-                                <option value=""> select boxes </option>
-                           @foreach($stores as $store)
-                                <option value="{{ $box->id }}">{{ $box->name }}</option>
-                           @endforeach
-                        </select>
+                            <input type="text" name="rack_id" class="form-control" id="inputTitle5">
+                            @error('rack_id')
+                                <div class="text-danger mt-3">{{$message}} </div>
+                            @enderror
                         </div>
-
-
-                        <div class="row mb-3">
-                        <label for="inputTitle4" class="col-sm-2 col-form-label">Product Name</label>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputTitle3" class="col-sm-2 col-form-label">Box_id</label>
                         <div class="col-sm-10">
-                            <select name="product_id" class="form-control">
-                                <option value=""> select boxes </option>
-                           @foreach($products as $product)
-                                <option value="{{ $product->id }}">{{ $product->name }}</option>
-                           @endforeach
-                        </select>
+                            <input type="text" name="box_id" class="form-control" id="inputTitle5">
+                            @error('box_id')
+                                <div class="text-danger mt-3">{{$message}} </div>
+                            @enderror
                         </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputTitle4" class="col-sm-2 col-form-label">Product_id</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="prodcut_id" class="form-control" id="inputTitle5">
+                            @error('product_id')
+                                <div class="text-danger mt-3">{{$message}} </div>
+                            @enderror
+                        </div>
+                    </div>
+
 
 
                     <div class="row mb-3">
