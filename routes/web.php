@@ -8,7 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\Product_transjectionController;
+use App\Http\Controllers\ProductTransjectionController;
 use App\Http\Controllers\ProductOrderController;
 
 /*
@@ -165,15 +165,15 @@ Route::prefix('suppliers')->group(function () {
 });
 Route::prefix('product_transjection')->group(function () {
 
-    Route::get('/', [Product_transjectionController::class,  'index'])->name('product_transjection.index');
+    Route::get('/', [ProductTransjectionController::class,  'index'])->name('product_transjection.index');
 
-    Route::get('/create', [Product_transjectionController::class, 'create'])->name('product_transjection.create');
-    Route::get('/show/{id}', [Product_transjectionController::class,  'show'])->name('product_transjection.show');
+    Route::get('/create', [ProductTransjectionController::class, 'create'])->name('product_transjection.create');
+    Route::get('/show/{id}', [ProductTransjectionController::class,  'show'])->name('product_transjection.show');
 
-    Route::post('/store', [Product_transjectionController::class,  'store'])->name('product_transjectionr.store');
-    Route::delete('/destroy/{id}', [Product_transjectionController::class, 'destroy'])->name('product_transjection.destroy');
-    Route::get('/edit/{id}', [Product_transjectionrController::class, 'edit'])->name('product_transjectionr.edit');
-    Route::post('/update/{id}',  [Product_transjectionController::class, 'update'])->name('product_transjection.update');
+    Route::post('/store', [ProductTransjectionController::class,  'store'])->name('product_transjection.store');
+    Route::delete('/destroy/{id}', [ProductTransjectionController::class, 'destroy'])->name('product_transjection.destroy');
+    Route::get('/edit/{id}', [ProductTransjectionController::class, 'edit'])->name('product_transjection.edit');
+    Route::post('/update/{id}',  [ProductTransjectionController::class, 'update'])->name('product_transjection.update');
 
 
 });

@@ -23,6 +23,7 @@ class BoxRequest extends FormRequest
     {
         return [
             'name'=>'required|unique:stores|max:255',
+            'rack_id'=>'required',
         ];
     }
 }

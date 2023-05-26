@@ -23,6 +23,7 @@ class RackRequest extends FormRequest
     {
         return [
             'name'=>'required|unique:stores|max:255',
+            'store_id'=>'required',
         ];
     }
 }

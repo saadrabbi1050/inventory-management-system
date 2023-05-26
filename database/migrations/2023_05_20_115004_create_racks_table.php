@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('racks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-        
+            $table->string('store_id');
+
             $table->timestamps();
         });
     }

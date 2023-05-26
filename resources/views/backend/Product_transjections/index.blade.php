@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-header d-flex">
                 Store List
-                <a href="{{ route('store.create')}}" class="btn btn-sm btn-outline-primary">Add New Product_transjection</a>
+                <a href="{{route('product_transjection.create')}}" class="btn btn-sm btn-outline-primary">Add New Product_transjection</a>
                 <div class="ps-5">
                     <button class="btn btn-sm btn-primary">PDF</button>
                     <button class="btn btn-sm btn-success">EXCEL</button>

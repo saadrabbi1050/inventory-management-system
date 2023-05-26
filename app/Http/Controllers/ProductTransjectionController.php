@@ -7,7 +7,7 @@ use App\Models\Product_transjection;
 use Exception;
 use Illuminate\Http\Request;
 
-class Product_transjectionController extends Controller
+class ProductTransjectionController extends Controller
 {
     public function index(){
         $product_transjections=Product_transjection::all();

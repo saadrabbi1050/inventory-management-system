@@ -21,6 +21,8 @@
                         <tr>
                             <th scope="col">Ser No</th>
                             <th scope="col">name</th>
+                            <th scope="col">store_id</th>
+
 
                             <th scope="col">Action</th>
                         </tr>
@@ -33,6 +35,7 @@
                         <tr>
                             <th scope="row">#PS24{{$count++}} </th>
                             <td>{{$rack->name?? ''}} </td>
+                            <td>{{$rack->store_id?? ''}} </td>
 
                             <td>
 
