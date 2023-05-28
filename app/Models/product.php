@@ -12,21 +12,14 @@ class Product extends Model
 
     protected $table = "products";
 
-    protected $fillable = ['name', 'price','qty', 'image','category_id', 'description'];
+    protected $fillable = ['name', 'price','qty', 'image','category_id','box_id', 'description'];
 
     public function category(){
         return $this->belongsTo(Category::class);
     }
-    public function products()
-    {
-        return $this->hasMany(Product_transjection::class);
+    public function box(){
+        return $this->belongsTo(Box::class);
     }
 
-
-
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
 
 }

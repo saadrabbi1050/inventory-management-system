@@ -11,7 +11,7 @@
                 <form action="{{ route('supplier.store')}}" method="POST">
                     @csrf
                     <div class="row mb-3">
-                        <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+                        <label for="inputTitle" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" id="inputTitle">
                             @error('name')
@@ -19,7 +19,7 @@
                             @enderror
                         </div>
                     </div>
-                   
+
                     <div class="row mb-3">
                         <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
                         <div class="col-sm-10">

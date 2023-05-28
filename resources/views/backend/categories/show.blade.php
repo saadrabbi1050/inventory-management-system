@@ -8,7 +8,7 @@
                 Category Details Informations
             </div>
             <div class="card-body">
-                <p>Title : {{ $category->name ?? '' }}</p>
+                <p>Name : {{ $category->name ?? '' }}</p>
             </div>
 
             Products :

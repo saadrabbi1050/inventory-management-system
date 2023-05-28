@@ -20,8 +20,8 @@
                     <thead>
                         <tr>
                             <th scope="col">Ser No</th>
-                            <th scope="col">name</th>
-                            <th scope="col">rack_id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Rack Name</th>
 
                             <th scope="col">Action</th>
                         </tr>
@@ -34,7 +34,7 @@
                         <tr>
                             <th scope="row">#PS24{{$count++}} </th>
                             <td>{{$box->name?? ''}} </td>
-                            <td>{{$box->rack_id?? ''}} </td>
+                            <td> {{ $box->rack->name ?? ' '}}</td>
 
                             <td>
 

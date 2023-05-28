@@ -21,7 +21,16 @@
                                @endforeach
                             </select>
                         </div>
+                        <br>
 
+                        <div>
+                            <select class="form-select" name="box_id">
+                                <option>Select Box</option>
+                               @foreach ($boxes as $bo)
+                                    <option value="{{ $bo->id}}">{{ $bo->name ?? ''}}</option>
+                               @endforeach
+                            </select>
+                        </div>
 
                         <div>
                             <label class="form-label">Name</label>
@@ -65,7 +74,7 @@
                         </div>
 
 
-                       
+
 
 
                         <button class="btn btn-sm btn-primary mt-3" type="submit"> <i class="bi bi-check"></i> Save</button>

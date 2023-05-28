@@ -20,8 +20,12 @@ class BoxController extends Controller
     }
     public function store(BoxRequest $request){
        try{
-        $data=$request->all();
-        Box::create($data);
+        $box  = Box::create([
+            'name' => $request->name ,
+
+            'rack_id' => $request->rack_id
+        ]);
+
 
         return redirect()->route('box.index')->withSuccess('box Added');
        }catch(Exception $e)

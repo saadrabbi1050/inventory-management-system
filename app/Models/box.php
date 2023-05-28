@@ -12,5 +12,11 @@ class Box extends Model
 
 
     protected $fillable = ['name','rack_id'];
-
+    public function rack(){
+        return $this->belongsTo(Rack::class);
+    }
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

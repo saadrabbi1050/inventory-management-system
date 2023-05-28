@@ -23,12 +23,12 @@
                       <tr>
                         <th scope="col">Ser No</th>
                         <th scope="col">Name</th>
+                        <th>Category Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Qty</th>
 
-                        <th>Category Name</th>
                         <th scope="col">Image</th>
-
+                        <th scope="col">Box Name</th>
 
                         <th scope="col">Actions</th>
                       </tr>
@@ -43,10 +43,12 @@
                           <tr>
                             <th scope="row"> {{ $sl++ }} </th>
                             <td>{{ $product->name ?? '' }}</td>
+                            <td> {{ $product->category->name ?? ' '}}</td>
                             <td>{{ $product->price ?? 'No Price Setup' }}</td>
                             <td>{{ $product->qty ?? '' }}</td>
 
-                            <td> {{ $product->category->name ?? ' '}}</td>
+
+
                             <td>
 
                               @if(file_exists(storage_path().'/app/public/products/'.$product->image ))
@@ -58,6 +60,9 @@
                               @endif
 
                             </td>
+                            <td> {{ $product->box->name ?? ' '}}</td>
+
+
                             <td>
                               <a class="btn btn-sm btn-primary" href="{{ route('product.show', $product->id)}}"><i class="bi bi-eye"></i></a>
 

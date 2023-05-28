@@ -16,8 +16,9 @@
                         <div class="col-sm-10">
                             <select name="store_id" class="form-control">
                                 <option value=""> select stores </option>
-                           @foreach($stores as $store)
-                                <option value="{{ $store->id }}">{{ $store->name }}</option>
+                           @foreach($stores as $sto)
+
+                            <option value="{{ $sto->id }}">{{ $sto->name }}</option>
                            @endforeach
                         </select>
                         </div>

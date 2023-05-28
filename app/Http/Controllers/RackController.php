@@ -21,8 +21,13 @@ class RackController extends Controller
     }
     public function store(RackRequest $request){
        try{
-        $data=$request->all();
-        Rack::create($data);
+
+        $rack  = Rack::create([
+            'name' => $request->name ,
+
+            'store_id' => $request->store_id
+        ]);
+
 
         return redirect()->route('rack.index')->withSuccess('rack Added');
        }catch(Exception $e)

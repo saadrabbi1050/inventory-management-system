@@ -12,5 +12,12 @@ class Rack extends Model
 
 
     protected $fillable = ['name','store_id'];
-    
+    public function store(){
+        return $this->belongsTo(Store::class);
+    }
+    public function boxes()
+    {
+        return $this->hasMany(Box::class);
+    }
+
 }

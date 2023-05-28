@@ -9,6 +9,7 @@ use Carbon\Carbon;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Box;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 
@@ -25,9 +26,10 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all();
+        $boxes = Box::all();
 
 
-        return view('backend.products.create', compact('categories'));
+        return view('backend.products.create', compact('categories', 'boxes'));
     }
 
     public function show($id)
@@ -49,12 +51,9 @@ class ProductController extends Controller
                 'price' => $request->price,
                 'description' => $request->description,
                 'image' => $image ?? '',
-                'category_id' => $request->category_id
+                'category_id' => $request->category_id,
+                'box_id' => $request->box_id
             ]);
-
-            // many to many pivot table
-
-
 
 
             return redirect()->route('product.index')->withMessage('Product Added');
@@ -68,6 +67,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $categories = Category::all();
+        $boxes = Box::all();
 
 
         $product  = Product::find($id);
@@ -75,7 +75,7 @@ class ProductController extends Controller
 
 
 
-        return view('backend.products.edit', compact('product', 'categories'));
+        return view('backend.products.edit', compact('product', 'categories','boxes'));
     }
 
     public function update(Request $request , $id)
@@ -86,11 +86,6 @@ class ProductController extends Controller
             $product = Product::find($id);
 
             $product->update($data);
-
-
-
-
-
 
             return redirect()->route('product.index')->withMessage('Updated Done');
         }catch(Exception $e){

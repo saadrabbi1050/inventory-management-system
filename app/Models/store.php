@@ -14,5 +14,9 @@ class Store extends Model
 
 
     protected $fillable = ['name'];
-    
+    public function racks()
+    {
+        return $this->hasMany(Rack::class);
+    }
+
 }
