@@ -90,6 +90,10 @@ Route::prefix('categories')->group(function () {
 
 
 Route::prefix('stores')->group(function () {
+    
+
+    Route::get('/storeView', [StoreController::class,  'storeView'])->name('store.storeView');
+
 
     Route::get('/', [StoreController::class,  'index'])->name('store.index');
 

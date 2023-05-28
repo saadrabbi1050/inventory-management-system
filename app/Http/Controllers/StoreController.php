@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
+
+    public function storeView()
+    {
+        $stores = Store::all();
+        return view('backend.stores.store-view', compact('stores'));
+
+    }
+
+
+
     public function index(){ 
         $stores=Store::all();
         return view('backend.stores.index', compact('stores'));

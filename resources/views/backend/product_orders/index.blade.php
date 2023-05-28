@@ -70,7 +70,7 @@
  <!-- Required meta tags -->
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Product Order</title>
+ <title>Product Order List</title>
  <!-- Bootstrap CSS -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
 rel="stylesheet" integrity="sha384-
@@ -79,10 +79,10 @@ crossorigin="anonymous">
  </head>
  <body>
  <div class="container text-center bg-success text-light my-2 p-2">
- <h1>Product Order</h1>
+ <h1>Product Order List</h1>
  <div class="card">
             <div class="card-header d-flex">
-                 Product order  List
+                 Product order List
                 <a href="{{ route('product_order.create')}}" class="btn btn-sm btn-outline-primary">Add New product_order </a>
                 <div class="ps-5">
                     <button class="btn btn-sm btn-primary">PDF</button>

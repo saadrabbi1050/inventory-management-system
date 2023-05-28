@@ -163,6 +163,12 @@
     </ul>
   </li>
 
+  <li>
+        <a  href="{{route('store.storeView')}}">
+          <i class="bi bi-circle"></i><span>Store View</span>
+        </a>
+      </li>
+
 
 
 

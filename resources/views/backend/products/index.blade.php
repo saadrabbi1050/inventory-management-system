@@ -63,9 +63,9 @@
                               @endif
 
                             </td>
-                            <td> {{ $product->box->name ?? ' '}}</td>
-                            <td> {{ $product->supplier->name ?? ' '}}</td>
-                            <td>{{ $product->description ?? ' '}}</td>
+                            <td> {{$product->box->name ?? ' '}}</td>
+                            <td> {{$product->supplier->name ?? ' '}}</td>
+                            <td>{{$product->description ?? ' '}}</td>
 
 
 
