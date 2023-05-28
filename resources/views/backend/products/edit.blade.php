@@ -30,6 +30,15 @@
                                @endforeach
                             </select>
                         </div>
+                        <br>
+                        <div>
+                            <select class="form-select" name="Supplier_id">
+                                <option>Select Suppliers</option>
+                               @foreach ($suppliers as $sup)
+                                    <option value="{{ $sup->id}}">{{ $sup->name ?? ''}}</option>
+                               @endforeach
+                            </select>
+                        </div>
 
 
                         <div>

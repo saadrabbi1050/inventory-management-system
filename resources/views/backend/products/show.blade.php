@@ -8,7 +8,7 @@
                 Product Details Informations
             </div>
             <div class="card-body">
-                <p>Title : {{ $product->name ?? '' }}</p>
+                <p>Name : {{ $product->name ?? '' }}</p>
                 <p>Price : {{ $product->price ?? '' }}</p>
                 <p>Qty: {{ $product->qty ?? '' }}</p>
                 <p>Image : {{ $product->image ?? '' }}</p>

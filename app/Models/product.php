@@ -12,7 +12,7 @@ class Product extends Model
 
     protected $table = "products";
 
-    protected $fillable = ['name', 'price','qty', 'image','category_id','box_id', 'description'];
+    protected $fillable = ['name', 'price','qty', 'image','category_id','box_id','supplier_id', 'description'];
 
     public function category(){
         return $this->belongsTo(Category::class);
@@ -21,5 +21,8 @@ class Product extends Model
         return $this->belongsTo(Box::class);
     }
 
+    public function supplier(){
+        return $this->belongsTo(Supplier::class);
+    }
 
 }

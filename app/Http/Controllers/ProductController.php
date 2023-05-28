@@ -10,6 +10,8 @@ use Carbon\Carbon;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Box;
+use App\Models\Supplier;
+
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 
@@ -27,9 +29,11 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $boxes = Box::all();
+        $suppliers = Supplier::all();
 
 
-        return view('backend.products.create', compact('categories', 'boxes'));
+
+        return view('backend.products.create', compact('categories', 'boxes','suppliers'));
     }
 
     public function show($id)
@@ -52,7 +56,8 @@ class ProductController extends Controller
                 'description' => $request->description,
                 'image' => $image ?? '',
                 'category_id' => $request->category_id,
-                'box_id' => $request->box_id
+                'box_id' => $request->box_id,
+                'supplier _id' =>$request->supplier_id  ?? ''
             ]);
 
 
@@ -68,6 +73,8 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $boxes = Box::all();
+        $suppliers = Supplier::all();
+
 
 
         $product  = Product::find($id);
@@ -75,7 +82,7 @@ class ProductController extends Controller
 
 
 
-        return view('backend.products.edit', compact('product', 'categories','boxes'));
+        return view('backend.products.edit', compact('product', 'categories','boxes','suppliers'));
     }
 
     public function update(Request $request , $id)

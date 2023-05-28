@@ -29,6 +29,8 @@
 
                         <th scope="col">Image</th>
                         <th scope="col">Box Name</th>
+                        <th scope="col">Supplier Name</th>
+                        <th scope="col">Description</th>
 
                         <th scope="col">Actions</th>
                       </tr>
@@ -45,7 +47,8 @@
                             <td>{{ $product->name ?? '' }}</td>
                             <td> {{ $product->category->name ?? ' '}}</td>
                             <td>{{ $product->price ?? 'No Price Setup' }}</td>
-                            <td>{{ $product->qty ?? '' }}</td>
+                            <td> {{ $product->qty ?? ' '}}</td>
+
 
 
 
@@ -61,6 +64,11 @@
 
                             </td>
                             <td> {{ $product->box->name ?? ' '}}</td>
+                            <td> {{ $product->supplier->name ?? ' '}}</td>
+                            <td>{{ $product->description ?? ' '}}</td>
+
+
+
 
 
                             <td>
