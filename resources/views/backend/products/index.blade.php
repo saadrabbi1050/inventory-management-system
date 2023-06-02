@@ -10,8 +10,8 @@
               Product List
               <a class="btn btn-sm btn-outline-primary ms-4" href="{{ route('product.create')}}" > <i class="bi bi-plus"></i> Add New Product</a>
               <div class="ps-5">
-                <a class="btn btn-sm btn-primary" href="" target="_blank"> <i class="bi bi-file-earmark-fill"></i> PDF</a>
-                <a class="btn btn-sm btn-success" href=""> <i class="bi bi-file-earmark-excel"></i> EXCEL</a>
+              <a class="btn btn-sm btn-primary" href="{{ route('product.pdf')}}" target="_blank"> <i class="bi bi-file-earmark-fill"></i> PDF</a>
+                <a class="btn btn-sm btn-success" href="{{ route('product.excel')}}"> <i class="bi bi-file-earmark-excel"></i> EXCEL</a>
                 <a class="btn btn-sm btn-warning" href="{{ route('product.trashlist')}}"> <i class="bi bi-trash"></i> BIN</a>
 
 

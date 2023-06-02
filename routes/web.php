@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ExcelController;
+use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BoxController;
 use App\Http\Controllers\RackController;
@@ -57,6 +59,9 @@ Route::prefix('products')->group(function () {
     Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
     Route::post('/update/{id}',  [ProductController::class, 'update'])->name('product.update');
     Route::delete('/destroy/{id}',  [ProductController::class, 'destroy'])->name('product.destroy');
+
+    Route::get('/pdf', [PdfController::class, 'productPDFGenerate'])->name('product.pdf');
+    Route::get('/excel', [ExcelController::class, 'export'])->name('product.excel');
 
 
 //soft delete routes
